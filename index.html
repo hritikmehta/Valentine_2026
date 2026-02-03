@@ -25,9 +25,28 @@
     <section id="proposal-section" class="hidden">
         <div class="card">
             <h1 id="proposal-text">Will you be my Valentine? 💝</h1>
-            <div id="gif-display">
+
+            <div id="gif-display"></div>
+
+            <div id="day-nav" class="day-nav">
+                <button data-day="0">Rose Day</button>
+                <button data-day="1">Propose Day</button>
+                <button data-day="2">Chocolate Day</button>
+                <button data-day="3">Teddy Day</button>
+                <button data-day="4">Promise Day</button>
+                <button data-day="5">Hug Day</button>
+                <button data-day="6">Kiss Day</button>
+                <button data-day="7">Valentine</button>
+            </div>
+
+            <div id="message-area" class="message-area">
+                <textarea id="day-message" placeholder="Write your message for this day..."></textarea>
+                <div class="message-actions">
+                    <button id="save-message">Save Message</button>
                 </div>
-            <div class="btn-container">
+            </div>
+
+            <div class="btn-container" id="btn-container">
                 <button id="yes-btn">YES! 💖</button>
                 <button id="no-btn">No 🥺</button>
             </div>
@@ -37,11 +56,15 @@
     <section id="gallery-section" class="hidden">
         <div class="gallery-wrapper">
             <div class="column column-up" id="col-left"></div>
+            <div class="center-column">
+                <div class="card center-card">
+                    <h2 id="gallery-title">Our Forever Memories ❤️</h2>
+                    <p id="one-day">One day at a time</p>
+                </div>
+            </div>
             <div class="column column-down" id="col-right"></div>
         </div>
-        <div class="final-overlay">
-            <h2>Our Forever Memories ❤️</h2>
-        </div>
+        <div class="footer">Build by Potato, for Potato</div>
     </section>
 
     <script src="script.js"></script>

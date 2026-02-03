@@ -16,6 +16,9 @@ body {
     height: 100vh;
 }
 
+/* Small utility */
+.centered { display:flex; justify-content:center; align-items:center; }
+
 /* Floating Hearts Background */
 #hearts-container {
     position: fixed;
@@ -52,6 +55,19 @@ body {
 
 .hidden { display: none !important; }
 
+/* Day navigation and message area */
+.day-nav { display:flex; flex-wrap:wrap; gap:6px; justify-content:center; margin-top:12px; }
+.day-nav button { padding:6px 10px; border-radius:12px; font-size:0.85rem; }
+.message-area { margin-top:12px; display:flex; flex-direction:column; gap:8px; }
+.message-area textarea { min-height:80px; resize:vertical; padding:8px; border-radius:8px; border:1px solid #eee; }
+.message-actions { display:flex; justify-content:center; }
+
+/* make sure main card is narrower on mobile */
+.card { max-width:520px; }
+
+/* Footer */
+.footer { text-align:center; padding:12px; color:#444; font-weight:600; }
+
 /* Buttons */
 button {
     background: linear-gradient(45deg, var(--primary-pink), var(--dark-pink));
@@ -61,15 +77,20 @@ button {
     border-radius: 50px;
     cursor: pointer;
     font-weight: bold;
-    transition: transform 0.2s;
+    transition: transform 0.12s, left 0.12s, top 0.12s;
     margin: 10px;
 }
 
 #yes-btn {
-    font-size: 1.5rem;
-    padding: 20px 40px;
+    font-size: 1.6rem;
+    padding: 22px 44px;
     position: relative; /* For cursor following JS */
+    will-change: transform;
 }
+
+#no-btn { position: relative; }
+
+#btn-container { display:flex; justify-content:center; align-items:center; }
 
 /* Gallery Section */
 .gallery-wrapper {
@@ -77,22 +98,25 @@ button {
     gap: 20px;
     height: 100vh;
     overflow: hidden;
+    align-items:center;
 }
 
 .column {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .column img {
-    width: 200px;
+    width: 220px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
 }
 
-.column-up { animation: scrollUp 20s linear infinite; }
-.column-down { animation: scrollDown 20s linear infinite; }
+.column-up { animation: scrollUp 18s linear infinite; }
+.column-down { animation: scrollDown 18s linear infinite; }
 
 @keyframes scrollUp {
     0% { transform: translateY(0); }
@@ -104,3 +128,6 @@ button {
     100% { transform: translateY(0); }
 }
 
+.center-column { display:flex; align-items:center; justify-content:center; }
+.center-card { width:420px; text-align:center; }
+#one-day { margin-top:12px; font-size:1rem; color:#333; font-weight:600; }
