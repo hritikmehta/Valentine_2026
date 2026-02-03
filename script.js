@@ -74,7 +74,7 @@ function loadGallery() {
     // Placeholders for your 10-15 images
     for (let i = 1; i <= 10; i++) {
         const img = document.createElement('img');
-        img.src = `assets/images/img${i}.webp`;
+        img.src = `assets/images/img${i}.png`;
         img.loading = "lazy";
         if (i % 2 === 0) leftCol.appendChild(img);
         else rightCol.appendChild(img);
