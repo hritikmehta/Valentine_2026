@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Tanvi 💖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="hearts-container"></div>
+
+    <section id="login-section" class="active">
+        <div class="card">
+            <h2>Click here if you are Tanvi 💖</h2>
+            <div class="input-group">
+                <input type="text" id="name-input" placeholder="Your Name">
+                <input type="password" id="pass-input" placeholder="Secret Password">
+                <button onclick="checkIdentity()">Enter ✨</button>
+            </div>
+            <p id="login-error" class="hidden"></p>
+            <img id="denied-gif" src="assets/gifs/running-man.gif" class="hidden" alt="Access Denied">
+        </div>
+    </section>
+
+    <section id="proposal-section" class="hidden">
+        <div class="card">
+            <h1 id="proposal-text">Will you be my Valentine? 💝</h1>
+            <div id="gif-display">
+                </div>
+            <div class="btn-container">
+                <button id="yes-btn">YES! 💖</button>
+                <button id="no-btn">No 🥺</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery-section" class="hidden">
+        <div class="gallery-wrapper">
+            <div class="column column-up" id="col-left"></div>
+            <div class="column column-down" id="col-right"></div>
+        </div>
+        <div class="final-overlay">
+            <h2>Our Forever Memories ❤️</h2>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
